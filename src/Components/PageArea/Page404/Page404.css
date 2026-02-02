@@ -1,0 +1,58 @@
+/* Page container - consistent with Home and About logic */
+.Page404 {
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0a23;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Content box container */
+.content-box {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Error code styling */
+.content-box h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #6e48aa;
+    font-weight: 800;
+}
+
+/* Message heading */
+.message h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+/* Paragraph styling */
+.message p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+/* Interaction button - styling preserved from original */
+button {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}

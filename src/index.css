@@ -1,0 +1,18 @@
+/* Global Reset and Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0f0a23; 
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}

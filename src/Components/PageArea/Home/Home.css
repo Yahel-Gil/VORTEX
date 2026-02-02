@@ -1,0 +1,146 @@
+:root {
+    --bg-dark: #0f0a23; 
+}
+
+/* Base Wrapper - The scroll container */
+.Home.parallax-wrapper {
+    height: calc(100vh - 70px); 
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px; 
+    background-color: var(--bg-dark);
+    position: relative;
+}
+
+/* Parallax Header Section */
+.parallax-header {
+    position: relative;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; 
+    z-index: -1;
+}
+
+/* The Background Image Layer */
+.layer-back {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mimics background-size: cover */
+    
+    /* Core Parallax Logic: Move back and scale up */
+    transform: translateZ(-10px) scale(2.1);
+    
+    pointer-events: none; /* Prevents user interaction with image */
+}
+
+/* The Content Layer (Text) */
+.layer-base {
+    transform: translateZ(0); /* Stay on the base layer */
+    text-align: center;
+    z-index: 1;
+    font-family: sans-serif;
+}
+
+.layer-base h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f0f0f0;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.layer-base p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+}
+
+/* Gradient Fade Overlay */
+.fade-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to bottom, transparent, var(--bg-dark));
+}
+
+/* Content Area below the header */
+.main-content {
+    position: relative;
+    z-index: 10;
+    background-color: var(--bg-dark);
+    padding: 0 20px 100px 20px;
+}
+
+/* Sticky Search Container - Transparent Background */
+.search-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px; 
+    z-index: 1000;
+    padding: 20px 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    pointer-events: none; 
+}
+
+/* Stylized Search Input - Glassmorphism Effect */
+.search-input {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Transparent dark background with blur */
+    background: rgba(15, 10, 35, 0.7); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    color: white;
+    outline: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+/* Coin List Grid */
+.coin-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Empty State / No Results */
+.no-results {
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+
+.no-results h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+}

@@ -1,0 +1,173 @@
+/* CoinCard.css - Full Stylesheet */
+
+:root {
+    --accent-cyan: #00f2ff;
+    --accent-purple: #a29bfe;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --glass-blur: blur(12px);
+}
+
+/* Main Card Container */
+.coin-card-mui {
+    width: 280px;
+    background: var(--card-bg) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease, 
+                border-color 0.3s ease !important;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover Effect */
+.coin-card-mui:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px 0 rgba(0, 242, 255, 0.15) !important;
+    border-color: rgba(0, 242, 255, 0.4) !important;
+}
+
+/* Card Header (Switch & Symbol) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.coin-symbol {
+    font-weight: 800 !important;
+    letter-spacing: 0.1em;
+    color: var(--accent-purple);
+    text-shadow: 0 0 10px rgba(162, 155, 254, 0.3);
+}
+
+/* Divider Styling */
+.coin-card-mui hr {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    margin: 0 !important;
+}
+
+/* Content Area - Fixed height to prevent "jumping" */
+.content-wrapper {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+}
+
+/* Standard View (Image & Name) */
+.main-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    /* Added overflow hidden to protect the view container: */
+    width: 100%;
+    overflow: hidden;
+}
+
+.coin-image {
+    width: 65px;
+    height: 65px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.coin-card-mui:hover .coin-image {
+    transform: scale(1.1);
+}
+
+.coin-name {
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    letter-spacing: 0.02em;
+    text-align: center;
+    /* Added text truncation logic: */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* Expanded Info View (Live Prices) */
+.overlay-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.price-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto Mono', monospace; /* Modern tech font look */
+    font-size: 1.15rem;
+}
+
+.price-row .symbol {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.price-row .val {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Toggle Button Styling */
+.toggle-button {
+    margin-top: auto !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    padding: 10px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.toggle-button:hover {
+    background: var(--accent-cyan) !important;
+    color: #000 !important;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4) !important;
+}
+
+/* Custom MUI Switch Colors */
+.MuiSwitch-switchBase.Mui-checked {
+    color: var(--accent-cyan) !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+    background-color: var(--accent-cyan) !important;
+}
+
+/* Circular Progress Color */
+.MuiCircularProgress-root {
+    color: var(--accent-cyan) !important;
+    margin: 20px auto;
+}
+
+/* View Collapse spacing fix */
+.view-collapse {
+    width: 100%;
+}

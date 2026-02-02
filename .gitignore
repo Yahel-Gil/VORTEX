@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Production
+dist/
+
+# Secrets (OpenAI API Key, etc.)
+.env
+*.local
+
+# Logs
+npm-debug.log*
+
+# OS Files
+.DS_Store

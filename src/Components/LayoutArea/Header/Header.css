@@ -1,0 +1,18 @@
+/* Header.css */
+
+.Header {
+    height: 70px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: auto;
+}

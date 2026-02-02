@@ -1,0 +1,112 @@
+/* Reports Main Container */
+.reports-page {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+
+    background-color: #0f0a23; 
+    height: calc(100vh - 70px); 
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding: 60px 20px; 
+    color: white;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Page Header and Title - Forced centering */
+.reports-header {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    display: block;
+}
+
+.reports-header h1 {
+    font-size: 3.5rem; 
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(to right, #ffffff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.header-underline {
+    width: 60px;
+    height: 4px;
+    background: #6e48aa;
+    margin: 15px auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* --- ORIGINAL DESIGN CONTENT BELOW --- */
+
+/* Main Content Container */
+.reports-main-content {
+    max-width: 1450px; 
+    margin: 0 auto;
+    width: 98%;
+}
+
+/* Single Unified Report Card */
+.main-report-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px 15px; 
+    border-top: 6px solid #6e48aa;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Live Price Boxes Dashboard */
+.live-values-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.value-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid #6e48aa;
+    padding: 12px 25px;
+    border-radius: 12px;
+    min-width: 150px;
+    text-align: left;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.value-box:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.box-sym {
+    display: block;
+    font-size: 0.85rem;
+    color: #a29bfe;
+    font-weight: 800;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.box-price {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0.6;
+}
